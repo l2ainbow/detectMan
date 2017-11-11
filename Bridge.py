@@ -10,6 +10,13 @@ import cv2
 import objc
 from Foundation import NSObject
 
+import logging
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
+
+logger.info("Loaded python bundle")
+
 # Load the protocol from Objective-C
 BridgeInterface = objc.protocolNamed("PythonToSwiftExample.BridgeInterface")
 
