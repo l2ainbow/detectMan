@@ -13,8 +13,8 @@
 		F9A6DFE61FB7484C005F0BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A6DFE51FB7484C005F0BB9 /* Assets.xcassets */; };
 		F9A6DFE91FB7484C005F0BB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A6DFE71FB7484C005F0BB9 /* LaunchScreen.storyboard */; };
 		F9A6DFF11FB7488B005F0BB9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6DFF01FB7488B005F0BB9 /* main.swift */; };
-		F9A6E0171FB74C1A005F0BB9 /* setup.py in Resources */ = {isa = PBXBuildFile; fileRef = F9A6E0161FB74C1A005F0BB9 /* setup.py */; };
-		F9A6E0191FB74C2C005F0BB9 /* Bridge.py in Resources */ = {isa = PBXBuildFile; fileRef = F9A6E0181FB74C2C005F0BB9 /* Bridge.py */; };
+		F9A6E0301FB76012005F0BB9 /* Bridge.py in Resources */ = {isa = PBXBuildFile; fileRef = F9A6E02F1FB76012005F0BB9 /* Bridge.py */; };
+		F9A6E0321FB76018005F0BB9 /* setup.py in Resources */ = {isa = PBXBuildFile; fileRef = F9A6E0311FB76018005F0BB9 /* setup.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		F9A6DFE81FB7484C005F0BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9A6DFEA1FB7484C005F0BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9A6DFF01FB7488B005F0BB9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		F9A6E0161FB74C1A005F0BB9 /* setup.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = setup.py; sourceTree = "<group>"; };
-		F9A6E0181FB74C2C005F0BB9 /* Bridge.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Bridge.py; sourceTree = "<group>"; };
+		F9A6E02F1FB76012005F0BB9 /* Bridge.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Bridge.py; sourceTree = "<group>"; };
+		F9A6E0311FB76018005F0BB9 /* setup.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = setup.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 		F9A6E00F1FB74ABB005F0BB9 /* py2app */ = {
 			isa = PBXGroup;
 			children = (
-				F9A6E0181FB74C2C005F0BB9 /* Bridge.py */,
-				F9A6E0161FB74C1A005F0BB9 /* setup.py */,
+				F9A6E0311FB76018005F0BB9 /* setup.py */,
+				F9A6E02F1FB76012005F0BB9 /* Bridge.py */,
 			);
 			path = py2app;
 			sourceTree = "<group>";
@@ -149,9 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9A6DFE91FB7484C005F0BB9 /* LaunchScreen.storyboard in Resources */,
+				F9A6E0301FB76012005F0BB9 /* Bridge.py in Resources */,
 				F9A6DFE61FB7484C005F0BB9 /* Assets.xcassets in Resources */,
-				F9A6E0171FB74C1A005F0BB9 /* setup.py in Resources */,
-				F9A6E0191FB74C2C005F0BB9 /* Bridge.py in Resources */,
+				F9A6E0321FB76018005F0BB9 /* setup.py in Resources */,
 				F9A6DFE41FB7484C005F0BB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +306,7 @@
 				DEVELOPMENT_TEAM = MF4M3CTG8F;
 				INFOPLIST_FILE = pythonTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Shingo.pythonTest;
+				PRODUCT_BUNDLE_IDENTIFIER = Shingo.DetectMan.pythonTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,7 +321,7 @@
 				DEVELOPMENT_TEAM = MF4M3CTG8F;
 				INFOPLIST_FILE = pythonTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Shingo.pythonTest;
+				PRODUCT_BUNDLE_IDENTIFIER = Shingo.DetectMan.pythonTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
