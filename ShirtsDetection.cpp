@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include <opencv2/core.hpp>    // coreモジュールのヘッダーをインクルード
 #include <opencv2/highgui.hpp> // highguiモジュールのヘッダーをインクルード
+#include <opencv2/imgproc/imgproc.hpp>
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -12,10 +13,28 @@
 using namespace cv;
 using namespace std;
 
+static void rgb2hsv(Mat &img) {
+	Mat hsv = img.clone();
+	
+	for (int i = 0; i < img.cols; i++) {
+		for (int j = 0; j < img.rows; j++) {
+			double r = img.at<Vec3b>(j, i)[0];
+			double g = img.at<Vec3b>(j, i)[1];
+			double b = img.at<Vec3d>(j, i)[2];
+
+			double MAX = max(r, g, b);
+			double MIN = min(r, g, b);
+
+			if (MIN == r) {
+
+			}
+		}
+	}
+}
+
 static void mask(Mat &gray, Mat &img) {
 	Mat hsv = img.clone();
 	cvCvtColor(&img, &hsv, CV_RGB2HSV_FULL);
-
 	for (int i = 0; i < gray.cols; i++) {
 		for (int j = 0; j < gray.rows; j++) {
 			bool b = hsv.at<Vec3b>(j, i)[0] > 10;
@@ -67,9 +86,11 @@ int main(int argc, const char* argv[])
 
 
 	Mat img = imread(filename, 1);
-	//cout << img.cols << endl;
+	cout << img.step << endl;
+	cout << img.cols << endl;
+	cout << img.rows << endl;
 
-	//imshow("shirts", img);
+	imshow("shirts", img);
 
 	waitKey(0);
 
