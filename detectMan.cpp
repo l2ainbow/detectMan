@@ -134,7 +134,7 @@ string detectMan(Mat &img, double oldD, double oldTheta) {
 		double x = rect.x + rect.width / 2 - w / 2;
 		double y = rect.y + rect.height / 2 - h / 2;
 
-		r = pow(x, 2) + pow(y, 2);
+		r = sqrt(pow(x, 2) + pow(y, 2));
 		theta = atan2(x, y);
 	}
 	img.release();
