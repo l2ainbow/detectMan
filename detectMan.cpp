@@ -82,7 +82,7 @@ static void detectShirt(Mat &img, vector<Rect> &rects) {
 	//gray.release();
 
 	for (int i = 0; i < contours->total; i++) {
-		CvArr *approx = NULL;
+		Mat *approx = Mat();
 		//bug, CvSeq cannot convert to CvArr
 		cvConvexHull2(&contours[i], approx);
 		rects.push_back(cvBoundingRect(approx));
