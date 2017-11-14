@@ -1,6 +1,6 @@
 // ShirtsDetection.cpp : コンソール アプリケーションのエントリ ポイントを定義します。
 //
-#include "stdafx.h"
+//#include "stdafx.h"
 
 #include <opencv2/core.hpp>    // coreモジュールのヘッダーをインクルード
 #include <opencv2/highgui.hpp> // highguiモジュールのヘッダーをインクルード
@@ -9,7 +9,7 @@
 #include <cmath>
 #include <string>
 #include <fstream>
-//#include "cpp.hpp"
+#include "cpp.hpp"
 using namespace cv;
 using namespace std;
 
@@ -83,6 +83,7 @@ static void detectShirt(Mat &img, vector<Rect> &rects) {
 
 	for (int i = 0; i < contours->total; i++) {
 		CvArr *approx = NULL;
+		//bug, CvSeq cannot convert to CvArr
 		cvConvexHull2(&contours[i], approx);
 		rects.push_back(cvBoundingRect(approx));
 	}
